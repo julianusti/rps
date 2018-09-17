@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1537162526837" clover="3.2.0">
+  <project timestamp="1537162526837" name="All files">
+    <metrics statements="78" coveredstatements="67" conditionals="26" coveredconditionals="22" methods="32" coveredmethods="26" elements="136" coveredelements="115" complexity="0" loc="78" ncloc="78" packages="7" files="16" classes="16">
+      <package name="lib">
+        <metrics statements="18" coveredstatements="15" conditionals="1" coveredconditionals="1" methods="10" coveredmethods="6"/>
+        <file name="combineReducers.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/lib/combineReducers.js">
+          <metrics statements="5" coveredstatements="5" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+          <line num="7" count="5" type="stmt"/>
+          <line num="8" count="6" type="cond" truecount="1" falsecount="0"/>
+          <line num="9" count="30" type="stmt"/>
+          <line num="10" count="58" type="stmt"/>
+          <line num="11" count="58" type="stmt"/>
+        </file>
+        <file name="createStore.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/lib/createStore.js">
+          <metrics statements="13" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="3"/>
+          <line num="7" count="5" type="stmt"/>
+          <line num="8" count="12" type="stmt"/>
+          <line num="9" count="12" type="stmt"/>
+          <line num="11" count="14" type="stmt"/>
+          <line num="15" count="12" type="stmt"/>
+          <line num="16" count="28" type="stmt"/>
+          <line num="17" count="28" type="stmt"/>
+          <line num="20" count="12" type="stmt"/>
+          <line num="21" count="0" type="stmt"/>
+          <line num="24" count="0" type="stmt"/>
+          <line num="25" count="0" type="stmt"/>
+          <line num="29" count="12" type="stmt"/>
+          <line num="31" count="12" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/lib/index.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="rps">
+        <metrics statements="23" coveredstatements="17" conditionals="12" coveredconditionals="10" methods="7" coveredmethods="5"/>
+        <file name="index.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/rps/index.js">
+          <metrics statements="23" coveredstatements="17" conditionals="12" coveredconditionals="10" methods="7" coveredmethods="5"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="5" count="1" type="stmt"/>
+          <line num="6" count="12" type="cond" truecount="3" falsecount="1"/>
+          <line num="7" count="0" type="stmt"/>
+          <line num="9" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="16" count="12" type="cond" truecount="4" falsecount="0"/>
+          <line num="17" count="3" type="stmt"/>
+          <line num="18" count="9" type="stmt"/>
+          <line num="21" count="3" type="stmt"/>
+          <line num="24" count="9" type="stmt"/>
+          <line num="28" count="1" type="stmt"/>
+          <line num="29" count="1" type="cond" truecount="3" falsecount="1"/>
+          <line num="30" count="0" type="stmt"/>
+          <line num="31" count="0" type="stmt"/>
+          <line num="35" count="0" type="stmt"/>
+          <line num="38" count="1" type="stmt"/>
+          <line num="40" count="1" type="stmt"/>
+          <line num="43" count="1" type="stmt"/>
+          <line num="44" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="47" count="1" type="stmt"/>
+          <line num="50" count="3" type="stmt"/>
+        </file>
+        <file name="result.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/rps/result.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="rps.strategies">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <file name="index.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/rps/strategies/index.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+        <file name="paper.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/rps/strategies/paper.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="3" type="stmt"/>
+        </file>
+        <file name="rock.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/rps/strategies/rock.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="5" type="stmt"/>
+        </file>
+        <file name="scissors.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/rps/strategies/scissors.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="4" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.actions">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
+        <file name="game.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/src/actions/game.js">
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
+          <line num="13" count="4" type="stmt"/>
+          <line num="20" count="4" type="stmt"/>
+          <line num="27" count="4" type="stmt"/>
+          <line num="34" count="4" type="stmt"/>
+          <line num="41" count="4" type="stmt"/>
+          <line num="55" count="4" type="stmt"/>
+          <line num="62" count="4" type="stmt"/>
+          <line num="69" count="4" type="stmt"/>
+          <line num="76" count="5" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/src/actions/index.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+      </package>
+      <package name="src.constants">
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/src/constants/index.js">
+          <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="5" type="stmt"/>
+          <line num="2" count="5" type="stmt"/>
+          <line num="3" count="5" type="stmt"/>
+          <line num="4" count="5" type="stmt"/>
+          <line num="5" count="5" type="stmt"/>
+          <line num="6" count="5" type="stmt"/>
+          <line num="7" count="5" type="stmt"/>
+          <line num="8" count="5" type="stmt"/>
+          <line num="9" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.reducers">
+        <metrics statements="15" coveredstatements="13" conditionals="13" coveredconditionals="11" methods="2" coveredmethods="2"/>
+        <file name="game.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/src/reducers/game.js">
+          <metrics statements="11" coveredstatements="9" conditionals="10" coveredconditionals="8" methods="1" coveredmethods="1"/>
+          <line num="12" count="4" type="stmt"/>
+          <line num="24" count="27" type="cond" truecount="7" falsecount="2"/>
+          <line num="26" count="2" type="stmt"/>
+          <line num="31" count="1" type="stmt"/>
+          <line num="36" count="0" type="stmt"/>
+          <line num="46" count="3" type="stmt"/>
+          <line num="51" count="3" type="stmt"/>
+          <line num="56" count="0" type="stmt"/>
+          <line num="61" count="1" type="stmt"/>
+          <line num="66" count="4" type="stmt"/>
+          <line num="71" count="13" type="stmt"/>
+        </file>
+        <file name="index.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/src/reducers/index.js">
+          <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        </file>
+        <file name="settings.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/src/reducers/settings.js">
+          <metrics statements="4" coveredstatements="4" conditionals="3" coveredconditionals="3" methods="1" coveredmethods="1"/>
+          <line num="5" count="4" type="stmt"/>
+          <line num="12" count="27" type="cond" truecount="2" falsecount="0"/>
+          <line num="14" count="2" type="stmt"/>
+          <line num="19" count="25" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.store">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="index.js" path="/Users/yustiyanovyc/dev/paper-rock-scissors/src/store/index.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="5" count="9" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

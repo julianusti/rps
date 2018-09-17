@@ -1,0 +1,31 @@
+{
+ "name": "paper-rock-scissors",
+ "version": "1.0.0",
+ "description": "Ebay quiz for PRS game",
+ "main": "index.html",
+ "scripts": {
+  "start": "webpack-dev-server --open --port 8080 --compress --mode development",
+  "dev": "webpack --mode development --progress",
+  "build": "webpack --mode production --progress",
+  "test": "jest",
+  "test:watch": "npm test -- --watch"
+ },
+ "dependencies": {
+  "@babel/polyfill": "^7.0.0"
+ },
+ "devDependencies": {
+  "@babel/cli": "^7.0.0",
+  "@babel/core": "^7.0.1",
+  "@babel/preset-env": "^7.0.0",
+  "babel-core": "^7.0.0-bridge.0",
+  "babel-jest": "^23.6.0",
+  "babel-loader": "^8.0.2",
+  "html-webpack-plugin": "^4.0.0-alpha.2",
+  "jest": "^23.6.0",
+  "regenerator-runtime": "^0.12.1",
+  "webpack": "^4.19.0",
+  "webpack-cli": "^3.1.0",
+  "webpack-dev-server": "^3.1.8"
+ },
+ "keywords": []
+}
