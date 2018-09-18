@@ -4,11 +4,9 @@ const SHAPES = Object.keys(strategies)
 
 export const play = (p1, p2) => {
   if (!p1.shape || !strategies[p1.shape]) {
-    const errorMsg = `"p1" shape type is wrong. Expected type: { ${Object.keys(
-      strategies
-    )
-      .filter(s => s !== p1.shape)
-      .join(' | ')} }`
+    const errorMsg = `"p2" shape type is wrong. Expected type: { ${SHAPES.filter(
+      s => s !== p2.shape
+    ).join(' | ')} }`
 
     throw new TypeError(errorMsg)
   }
