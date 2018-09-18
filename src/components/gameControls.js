@@ -35,6 +35,7 @@ export default class GameControls {
         return
     }
   }
+
   /**
    * Adds event listener to `window` object.
    */
@@ -98,6 +99,7 @@ export default class GameControls {
         this.store.dispatch(playerTwoMove(playerTwoSelectedShape))
       }
     }
+
     return update[playerOneVsPlayerTwo] || (() => {})
   }
 }
