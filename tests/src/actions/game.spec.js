@@ -3,34 +3,6 @@ import * as actions from '../../../src/actions'
 import * as types from '../../../src/constants'
 
 describe('Action creators suit', () => {
-  it('should create an action to set rounds for the game', () => {
-    const roundsToPlay = 5
-    const expectedAction = {
-      type: types.SET_ROUNDS_TO_PLAY,
-      payload: { roundsToPlay }
-    }
-
-    expect(actions.setRoundsToPlay(roundsToPlay)).toEqual(expectedAction)
-  })
-
-  it('should create an action to see how many rounds left', () => {
-    const expectedAction = {
-      type: types.UPDATE_ROUNDS_LEFT,
-      payload: {}
-    }
-
-    expect(actions.updateRoundsLeft()).toEqual(expectedAction)
-  })
-
-  it('should create an action to start the game', () => {
-    const expectedAction = {
-      type: types.GAME_START,
-      payload: { isPlaying: true }
-    }
-
-    expect(actions.startGame()).toEqual(expectedAction)
-  })
-
   it('should create an action to end the game', () => {
     const expectedAction = {
       type: types.GAME_END,
@@ -44,15 +16,13 @@ describe('Action creators suit', () => {
     const expectedAction = {
       type: types.GAME_RESTART,
       payload: {
-        isPlaying: false,
+        isPlaying: true,
         playerOneSelectedShape: undefined,
         playerTwoSelectedShape: undefined,
-        isPlaying: false,
         score: {
           playerOne: 0,
           playerTwo: 0
-        },
-        roundsToPlay: 3
+        }
       }
     }
 

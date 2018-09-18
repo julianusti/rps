@@ -2,30 +2,47 @@ import strategies from './strategies'
 
 const SHAPES = Object.keys(strategies)
 
-export const play = (p1, p2) => {
-  if (!p1.shape || !strategies[p1.shape]) {
-    const errorMsg = `"p2" shape type is wrong. Expected type: { ${SHAPES.filter(
-      s => s !== p2.shape
+/**
+ * Returns the game result between player1 and player2.
+ * @param {Object} playerOne.shape - The player1 shape.
+ * @param {Object} playerTwo.shape - The player2 shape.
+ * @returns {string} game result one of: win | lose | tie
+ */
+export const play = (playerOne, playerTwo) => {
+  if (!playerOne.shape || !strategies[playerOne.shape]) {
+    const errorMsg = `"playerTwo" shape type is wrong. Expected type: { ${SHAPES.filter(
+      s => s !== playerTwo.shape
     ).join(' | ')} }`
 
     throw new TypeError(errorMsg)
   }
 
-  if (!p2.shape || !strategies[p2.shape]) {
-    const errorMsg = `"p2" shape type is wrong. Expected type: { ${SHAPES.filter(
-      s => s !== p2.shape
+  if (!playerTwo.shape || !strategies[playerTwo.shape]) {
+    const errorMsg = `"playerTwo" shape type is wrong. Expected type: { ${SHAPES.filter(
+      s => s !== playerTwo.shape
     ).join(' | ')} }`
 
     throw new TypeError(errorMsg)
   }
 
-  return strategies[p1.shape](p2.shape)
+  return {
+    playerOneSelectedShape: playerOne.shape,
+    playerTwoSelectedShape: playerTwo.shape,
+    result: {
+      playerOneVsPlayerTwo: strategies[playerOne.shape](playerTwo.shape)
+    }
+  }
 }
 
-export const playVsComputer = p1 => {
-  if (!p1.shape || !strategies[p1.shape]) {
-    const errorMsg = `"p1" shape type is wrong. Expected type: { ${SHAPES.filter(
-      s => s !== p1.shape
+/**
+ * Returns the game result between player1 and computer.
+ * @param {Object} playerOne.shape - The player1 shape.
+ * @returns {string} game result one of: win | lose | tie
+ */
+export const playVsComputer = playerOne => {
+  if (!playerOne.shape || !strategies[playerOne.shape]) {
+    const errorMsg = `"playerOne" shape type is wrong. Expected type: { ${SHAPES.filter(
+      s => s !== playerOne.shape
     ).join(' | ')} }`
 
     throw new TypeError(errorMsg)
@@ -33,15 +50,37 @@ export const playVsComputer = p1 => {
 
   const computerShape = getRandomShape(SHAPES)
 
-  return strategies[p1.shape](computerShape)
+  return {
+    playerOneSelectedShape: playerOne.shape,
+    playerTwoSelectedShape: computerShape,
+    result: {
+      playerOneVsPlayerTwo: strategies[playerOne.shape](computerShape)
+    }
+  }
 }
 
+/**
+ * Returns the game result between computer and computer.
+ * The shapes selected randomly to emulate both computers.
+ * @returns {string} game result one of: win | lose | tie
+ */
 export const computerVsComputer = () => {
   const computerOneShape = getRandomShape(SHAPES)
   const computerTwoShape = getRandomShape(SHAPES)
 
-  return strategies[computerOneShape](computerTwoShape)
+  return {
+    playerOneSelectedShape: computerOneShape,
+    playerTwoSelectedShape: computerTwoShape,
+    result: {
+      playerOneVsPlayerTwo: strategies[computerOneShape](computerTwoShape)
+    }
+  }
 }
 
+/**
+ * Returns random shape.
+ * @param {string[]} shapes - possible shapes.
+ * @returns {string} random shape one of: paper | rock | scissors
+ */
 const getRandomShape = shapes =>
   shapes[Math.floor(Math.random() * shapes.length)]

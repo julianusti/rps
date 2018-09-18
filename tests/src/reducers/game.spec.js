@@ -5,17 +5,15 @@ const initialState = {
   game: {
     playerOneSelectedShape: undefined,
     playerTwoSelectedShape: undefined,
-    isPlaying: false,
+    isPlaying: true,
     score: {
       playerOne: 0,
       playerTwo: 0
-    },
-    roundsToPlay: 3
+    }
   },
   settings: {
-    gameShapes: ['paper', 'rock', 'scissors'],
-    gameTypes: ['human_vs_computer', 'computer_vs_computer'],
-    selectedGameType: 'human_vs_computer'
+    gameTypes: ['player_vs_computer', 'computer_vs_computer'],
+    selectedGameType: 'player_vs_computer'
   }
 }
 
@@ -24,18 +22,6 @@ describe('Game reducer suit', () => {
 
   beforeEach(() => {
     store = configureStore({})
-  })
-
-  it('should start the game', () => {
-    store.dispatch(actions.startGame())
-
-    expect(store.getState()).toEqual({
-      ...initialState,
-      game: {
-        ...initialState.game,
-        isPlaying: true
-      }
-    })
   })
 
   it('should end the game', () => {
@@ -51,7 +37,7 @@ describe('Game reducer suit', () => {
   })
 
   it('should restart the game', () => {
-    store.dispatch(actions.startGame())
+    store.dispatch(actions.restartGame())
 
     store.dispatch(actions.playerOneMove('rock'))
     store.dispatch(actions.playerTwoMove('paper'))
@@ -67,8 +53,7 @@ describe('Game reducer suit', () => {
         score: {
           playerOne: 1,
           playerTwo: 0
-        },
-        roundsToPlay: 3
+        }
       }
     })
   })
@@ -99,16 +84,5 @@ describe('Game reducer suit', () => {
         playerTwoSelectedShape: 'paper'
       }
     })
-  })
-
-  it('should update rounds to play', () => {
-    let roundsToPlay = store.getState().game.roundsToPlay
-    expect(roundsToPlay).toEqual(3)
-
-    store.dispatch(actions.playerOneMove('rock'))
-    store.dispatch(actions.playerTwoMove('paper'))
-    store.dispatch(actions.updateRoundsLeft(2))
-
-    expect(store.getState().game.roundsToPlay).toEqual(2)
   })
 })

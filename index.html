@@ -5,14 +5,51 @@
   <title>Rock-Paper-Scissors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1,
   shrink-to-fit=no">
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
 </head>
 
 <body>
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-	<div id="app"></div>
+  <div id="app">
+    <header class="settings-header">
+      <button role="button" data-action="RESTART_GAME">
+        Restart
+      </button>
+    </header>
+    <section>
+      <div class="game-player-one-shape">
+        <strong>Player One:</strong> <span></span>
+      </div>
+      <strong>vs.</strong>
+      <div class="game-player-two-shape">
+        <strong>Player Two:</strong> <span></span>
+      </div>
+      <div class="game-current-score">
+        <strong>Score:</strong> <span>0/0</span>
+      </div>
+    </section>
+    <footer class="game-footer">
+      <ul class="game-controls">
+        <li>
+          <button role="button" data-action="PAPER_SHAPE">
+            <div>Paper</div>
+          </button>
+        </li>
+        <li>
+          <button role="button" data-action="ROCK_SHAPE">
+            <div>Rock</div>
+          </button>
+        </li>
+        <li>
+          <button role="button" data-action="SCISSORS_SHAPE">
+            <div>Scissors</div>
+          </button>
+        </li>
+      </ul>
+    </footer>
+  </div>
 </body>
 
 </html>

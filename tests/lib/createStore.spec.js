@@ -6,17 +6,15 @@ const initialState = {
   game: {
     playerOneSelectedShape: undefined,
     playerTwoSelectedShape: undefined,
-    isPlaying: false,
+    isPlaying: true,
     score: {
       playerOne: 0,
       playerTwo: 0
-    },
-    roundsToPlay: 3
+    }
   },
   settings: {
-    gameShapes: ['paper', 'rock', 'scissors'],
-    gameTypes: ['human_vs_computer', 'computer_vs_computer'],
-    selectedGameType: 'human_vs_computer'
+    gameTypes: ['player_vs_computer', 'computer_vs_computer'],
+    selectedGameType: 'player_vs_computer'
   }
 }
 

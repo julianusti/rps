@@ -5,16 +5,14 @@ const initialState = {
   game: {
     playerOneSelectedShape: undefined,
     playerTwoSelectedShape: undefined,
-    isPlaying: false,
+    isPlaying: true,
     score: {
       playerOne: 0,
       playerTwo: 0
-    },
-    roundsToPlay: 3
+    }
   },
   settings: {
-    gameShapes: ['paper', 'rock', 'scissors'],
-    gameTypes: ['human_vs_computer', 'computer_vs_computer'],
+    gameTypes: ['player_vs_computer', 'computer_vs_computer'],
     selectedGameType: ''
   }
 }
@@ -26,14 +24,14 @@ describe('Settings reducer suit', () => {
     store = configureStore({})
   })
 
-  it('should be possible to set to play human vs computer', () => {
-    store.dispatch(actions.selectGameType('human_vs_computer'))
+  it('should be possible to set to play player vs computer', () => {
+    store.dispatch(actions.selectGameType('player_vs_computer'))
 
     expect(store.getState()).toEqual({
       ...initialState,
       settings: {
         ...initialState.settings,
-        selectedGameType: 'human_vs_computer'
+        selectedGameType: 'player_vs_computer'
       }
     })
   })

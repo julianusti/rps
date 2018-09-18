@@ -1,32 +1,23 @@
 import {
-  GAME_START,
   GAME_END,
   GAME_RESTART,
   PLAYER_ONE_SELECTED_SHAPE,
   PLAYER_TWO_SELECTED_SHAPE,
-  SET_ROUNDS_TO_PLAY,
-  UPDATE_SCORE,
-  UPDATE_ROUNDS_LEFT
+  UPDATE_SCORE
 } from '../constants'
 
 const initialState = {
   playerOneSelectedShape: undefined,
   playerTwoSelectedShape: undefined,
-  isPlaying: false,
+  isPlaying: true,
   score: {
     playerOne: 0,
     playerTwo: 0
-  },
-  roundsToPlay: 3
+  }
 }
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case GAME_START:
-      return {
-        ...state,
-        isPlaying: true
-      }
     case GAME_END:
       return {
         ...state,
@@ -35,12 +26,13 @@ export default (state = initialState, action) => {
     case GAME_RESTART:
       return {
         ...state,
-        isPlaying: false,
+        isPlaying: true,
         score: {
           playerOne: 0,
           playerTwo: 0
         },
-        roundsToPlay: 3
+        playerOneSelectedShape: undefined,
+        playerTwoSelectedShape: undefined
       }
     case PLAYER_ONE_SELECTED_SHAPE:
       return {
@@ -51,16 +43,6 @@ export default (state = initialState, action) => {
       return {
         ...state,
         playerTwoSelectedShape: action.payload.playerTwoSelectedShape
-      }
-    case SET_ROUNDS_TO_PLAY:
-      return {
-        ...state,
-        roundsToPlay: action.payload.roundsToPlay
-      }
-    case UPDATE_ROUNDS_LEFT:
-      return {
-        ...state,
-        roundsToPlay: action.payload.roundsToPlay
       }
     case UPDATE_SCORE:
       return {

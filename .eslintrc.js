@@ -1,15 +1,15 @@
 module.exports = {
   extends: ['prettier'],
   parserOptions: {
-    ecmaVersion: 7,
+    ecmaVersion: 6,
     sourceType: 'module',
     ecmaFeatures: {
-      experimentalObjectRestSpread: true,
-    },
+      experimentalObjectRestSpread: true
+    }
   },
   env: {
     jest: true,
-    es6: true,
+    es6: true
   },
   plugins: ['prettier'],
   rules: {
@@ -23,8 +23,8 @@ module.exports = {
         singleQuote: true,
         trailingComma: 'none',
         bracketSpacing: true,
-        fluid: false,
-      },
-    ],
-  },
-};
+        fluid: false
+      }
+    ]
+  }
+}

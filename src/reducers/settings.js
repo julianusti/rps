@@ -1,9 +1,8 @@
 import { SELECTED_GAME_TYPE } from '../constants'
 
 const initialState = {
-  gameShapes: ['paper', 'rock', 'scissors'],
-  gameTypes: ['human_vs_computer', 'computer_vs_computer'],
-  selectedGameType: 'human_vs_computer'
+  gameTypes: ['player_vs_computer', 'computer_vs_computer'],
+  selectedGameType: 'player_vs_computer'
 }
 
 export default (state = initialState, action) => {
