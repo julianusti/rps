@@ -1,4 +1,4 @@
-import ScoreLabel from './$label'
+import ScoreLabel from './$score'
 
 /**
  * @class ScoreObserver
@@ -6,7 +6,7 @@ import ScoreLabel from './$label'
 export default class ScoreObserver {
   constructor(store) {
     this.store = store
-    this.$label = new ScoreLabel()
+    this.$score = new ScoreLabel()
   }
 
   updateScore() {
@@ -18,7 +18,7 @@ export default class ScoreObserver {
       return
     }
 
-    this.$label.updateLabel(`${score.playerOne}/${score.playerTwo}`)
+    this.$score.updateLabel(`${score.playerOne}/${score.playerTwo}`)
   }
 
   init() {
