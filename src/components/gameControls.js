@@ -20,13 +20,16 @@ export default class GameControls {
 
     switch (actionType) {
       case 'PAPER_SHAPE':
-        this.play('paper')
+        this.playPlayerVsComputer('paper')
         return
       case 'ROCK_SHAPE':
-        this.play('rock')
+        this.playPlayerVsComputer('rock')
         return
       case 'SCISSORS_SHAPE':
-        this.play('scissors')
+        this.playPlayerVsComputer('scissors')
+        return
+      case 'COMPUTER_VS_COMPUTER':
+        this.playComputerVsCompuer()
         return
       default:
         return
@@ -43,8 +46,15 @@ export default class GameControls {
     console.info('GameControls - event listeners added.')
   }
 
-  play(shape) {
+  playPlayerVsComputer(shape) {
     const result = playVsComputer({ shape })
+    const dispatchActions = this.updateResult(result)
+
+    dispatchActions()
+  }
+
+  playComputerVsCompuer() {
+    const result = computerVsComputer()
     const dispatchActions = this.updateResult(result)
 
     dispatchActions()
