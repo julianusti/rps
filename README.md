@@ -2,7 +2,7 @@ RPS - implementation of `rock-paper-scissors` game in `vanilla JS` with `custom 
 
 **Attention 1**: when you see `$` or `$$` in this project, don't worry, it's not `jQuery`. It's just a named wrappers for `document.querySelector` and `document.querySelectorAll`.
 
-**Attention 2**: the main focus of this `rps` implementation covers architecturual aspects. Therefore, UI part was is really basic, without any css. If you need css as a part of this assesment, let me know and I'll implement it.
+**Attention 2**: the main focus of this `rps` implementation covers architecturual aspects. Therefore, UI part is really basic, without any css. If you need css as a part of this assesment, let me know and I'll implement it.
 
 ## Project Structure
 
