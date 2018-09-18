@@ -1,7 +1,7 @@
 {
-  "name": "paper-rock-scissors",
+  "name": "rock-paper-scissors",
   "version": "1.0.0",
-  "description": "Ebay quiz for PRS game",
+  "description": "Rock Paper Scissors - fun exercise to try redux without react.",
   "main": "index.html",
   "scripts": {
     "start": "webpack-dev-server --open --port 8080 --compress --mode development",
