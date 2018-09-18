@@ -15,6 +15,7 @@ export const play = (p1, p2) => {
     const errorMsg = `"p2" shape type is wrong. Expected type: { ${SHAPES.filter(
       s => s !== p2.shape
     ).join(' | ')} }`
+
     throw new TypeError(errorMsg)
   }
 
