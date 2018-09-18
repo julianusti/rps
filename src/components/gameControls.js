@@ -1,5 +1,10 @@
 import { $$ } from '../utils'
-import { updateScore, playerOneMove, playerTwoMove } from '../actions'
+import {
+  updateScore,
+  playerOneMove,
+  playerTwoMove,
+  restartGame
+} from '../actions'
 import { playVsComputer, computerVsComputer } from '../../rps'
 
 /**
@@ -30,6 +35,9 @@ export default class GameControls {
         return
       case 'COMPUTER_VS_COMPUTER':
         this.playComputerVsCompuer()
+        return
+      case 'RESTART_GAME':
+        this.store.dispatch(restartGame())
         return
       default:
         return
