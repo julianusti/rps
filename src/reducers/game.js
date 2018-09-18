@@ -1,5 +1,4 @@
 import {
-  GAME_END,
   GAME_RESTART,
   PLAYER_ONE_SELECTED_SHAPE,
   PLAYER_TWO_SELECTED_SHAPE,
@@ -18,11 +17,6 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case GAME_END:
-      return {
-        ...state,
-        isPlaying: false
-      }
     case GAME_RESTART:
       return {
         ...state,

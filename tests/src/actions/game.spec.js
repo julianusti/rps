@@ -3,15 +3,6 @@ import * as actions from '../../../src/actions'
 import * as types from '../../../src/constants'
 
 describe('Action creators suit', () => {
-  it('should create an action to end the game', () => {
-    const expectedAction = {
-      type: types.GAME_END,
-      payload: { isPlaying: false }
-    }
-
-    expect(actions.endGame()).toEqual(expectedAction)
-  })
-
   it('should create an action to restart the game', () => {
     const expectedAction = {
       type: types.GAME_RESTART,
@@ -27,16 +18,6 @@ describe('Action creators suit', () => {
     }
 
     expect(actions.restartGame()).toEqual(expectedAction)
-  })
-
-  it('should create an action to select the game type', () => {
-    const selectedGameType = 'human_vs_computer'
-    const expectedAction = {
-      type: types.SELECTED_GAME_TYPE,
-      payload: { selectedGameType }
-    }
-
-    expect(actions.selectGameType(selectedGameType)).toEqual(expectedAction)
   })
 
   it('should create an action when first player plays a shape paper|rock|scissors', () => {

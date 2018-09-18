@@ -1,18 +1,9 @@
 import {
-  SELECTED_GAME_TYPE,
-  GAME_END,
   GAME_RESTART,
   PLAYER_ONE_SELECTED_SHAPE,
   PLAYER_TWO_SELECTED_SHAPE,
   UPDATE_SCORE
 } from '../constants'
-
-export const endGame = () => ({
-  type: GAME_END,
-  payload: {
-    isPlaying: false
-  }
-})
 
 export const restartGame = () => ({
   type: GAME_RESTART,
@@ -24,13 +15,6 @@ export const restartGame = () => ({
       playerOne: 0,
       playerTwo: 0
     }
-  }
-})
-
-export const selectGameType = selectedGameType => ({
-  type: SELECTED_GAME_TYPE,
-  payload: {
-    selectedGameType
   }
 })
 

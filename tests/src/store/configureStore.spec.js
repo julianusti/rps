@@ -11,10 +11,6 @@ describe('Configure store with preloaded state suit', () => {
           playerOne: 0,
           playerTwo: 0
         }
-      },
-      settings: {
-        gameTypes: ['player_vs_computer', 'computer_vs_computer'],
-        selectedGameType: 'player_vs_computer'
       }
     }
 

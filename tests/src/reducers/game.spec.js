@@ -10,10 +10,6 @@ const initialState = {
       playerOne: 0,
       playerTwo: 0
     }
-  },
-  settings: {
-    gameTypes: ['player_vs_computer', 'computer_vs_computer'],
-    selectedGameType: 'player_vs_computer'
   }
 }
 
@@ -22,18 +18,6 @@ describe('Game reducer suit', () => {
 
   beforeEach(() => {
     store = configureStore({})
-  })
-
-  it('should end the game', () => {
-    store.dispatch(actions.endGame())
-
-    expect(store.getState()).toEqual({
-      ...initialState,
-      game: {
-        ...initialState.game,
-        isPlaying: false
-      }
-    })
   })
 
   it('should restart the game', () => {
