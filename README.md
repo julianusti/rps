@@ -45,6 +45,7 @@ yarn install
 ```
 yarn start
 ```
+**Hint:** Since we have our own implementation of `redux` which is really limitted to this particular use case, we don't have any dev tools, like those that shows you the state tree when certain `action` is dispatched. Therefore, our version of `redux` outputs each action with `action.type` and `action.payload` to the console of your browser, so we can debug our app.
 
 4. To build `rps` for production, run the following command:
 
