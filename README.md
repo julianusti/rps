@@ -9,8 +9,7 @@ RPS - implementation of `rock-paper-scissors` game in `vanilla JS` with `custom 
 📁 `lib` - this folder contains tiny redux implementation that allows us to follow unidirectional data flow, from `view component`>`action`>`reducer`>`view component`.
 **Keep in mind:** It doesn't covers all the edge cases.
 
-📁 `rps` - this folder contains `rock-paper-scissors` game/rule engine. It's super easy to extend with other shapes, like `lizard` and `spock`.
-All you have todo is to create your new strategy, like below and include it to `index.js` in the same folder:
+📁 `rps` - this folder contains `rock-paper-scissors` game/rule engine. It's using `strategy design pattern` and at the same time leveraging `JavaScript` fundamentals of dealing with `object literals` and `functions`. Each strategy in our case is a `pure function`, it defines the rules per shape (paper, rock, scissors). To extend it with the new shape, you have to create a new strategy and import it to `index.js`, where it is used in `object literal` where `key` is the name of the shape and `value` its strategy implementation.
 
 ```
 import result from '../result'
