@@ -30,7 +30,7 @@ export default function(shape) {
 
 ## How To Run It
 
-1. Make sure you are running uptodate version of `Node.JS`. We use `node v. 10`.
+1. Make sure you are running uptodate version of `Node.JS`. We use `version 10`.
 2. Install all dependecies by running command in your terminal:
 
 ```
