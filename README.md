@@ -24,7 +24,8 @@ export default function(shape) {
 }
 ```
 
-📁 `src` - this folder contains UI specific components, like: `actions`, `reducers`, 📁 `store` and `components`.
+📁 `src` - this folder contains UI specific components, like: `actions`, `reducers`, `store` and `components`.
+
 📁 `tests` - this folder is for our tests.
 
 ## How To Run It
