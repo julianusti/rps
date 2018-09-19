@@ -1,8 +1,8 @@
 RPS - implementation of `rock-paper-scissors` game in `vanilla JS` with `custom redux`, connected to `ui-components` and structured in a similar way like `react components`.
 
-Attention❗ when you see `$` or `$$` in this project, don't worry, it's not `jQuery`. It's just a named wrappers for `document.querySelector` and `document.querySelectorAll`.
+**Attention❗** when you see `$` or `$$` in this project, don't worry, it's not `jQuery`. It's just a named wrappers for `document.querySelector` and `document.querySelectorAll`.
 
-Attention❗ the main focus of this `rps` implementation covers architecturual aspects. Therefore, UI part is really basic, without any stylings.
+**Attention❗** the main focus of this `rps` implementation covers architecturual aspects. Therefore, UI part is really basic, without any stylings.
 
 ## Project Structure
 
