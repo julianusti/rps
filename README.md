@@ -11,6 +11,7 @@ RPS - implementation of `rock-paper-scissors` game in `vanilla JS` with `custom 
 
 📁 `rps` - this folder contains `rock-paper-scissors` game/rule engine. It's using `strategy design pattern` and at the same time leveraging `JavaScript` fundamentals of dealing with `object literals` and `functions`. Each strategy in our case is a `pure function`, it defines the rules per shape (paper, rock, scissors). To extend it with the new shape, you have to create a new strategy and import it to `index.js`, where it is used in `object literal` where `key` is the name of the shape and `value` its strategy implementation.
 
+Example of `paper` strategy:
 ```
 import result from '../result'
 
@@ -20,6 +21,20 @@ export default function(shape) {
     scissors: result.LOSE,
     paper: result.TIE
   }[shape]
+}
+```
+
+`rps/index.js` file where we export import the `paper` strategy and export it as `object literal`:
+
+```
+import rockStrategy from './rock'
+import paperStrategy from './paper'
+import scissorsStrategy from './scissors'
+
+export default {
+  rock: rockStrategy,
+  paper: paperStrategy,
+  scissors: scissorsStrategy
 }
 ```
 
