@@ -31,7 +31,7 @@ export default function(shape) {
 ## How To Run It
 0. Clone the repository to your local enviroment by running a comman in your terminal:
 ```
-git clone git@github.com:julianusti/rps.gi
+git clone git@github.com:julianusti/rps.git
 ```
 1. Make sure you are running uptodate version of `Node.JS`. We use `version 10`.
 2. Install all dependecies by running command in your terminal:
