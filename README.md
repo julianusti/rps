@@ -24,7 +24,7 @@ export default function(shape) {
 }
 ```
 
-`rps/index.js` file where we export import the `paper` strategy and export it as `object literal`:
+`rps/index.js` file where we use the `paper` strategy and export it as `object literal`:
 
 ```
 import rockStrategy from './rock'
