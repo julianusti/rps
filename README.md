@@ -6,10 +6,10 @@ RPS - implementation of `rock-paper-scissors` game in `vanilla JS` with `custom 
 
 ## Project Structure
 
-📁 `lib` - this folder contains tiny redux implementation that allows us to follow unidirectional data flow, from `view component`>`action`>`reducer`>`view component`.
+📁 `lib` - this folder contains tiny redux implementation that allows us to follow unidirectional data flow, from `view component`>`action`>`reducer`>`view component`.__
 **Keep in mind:** It doesn't covers all the edge cases.
 
-📁 `rps` - this folder contains `rock-paper-scissors` game/rule engine. It's super easy to extend with other shapes, like `lizard` and `spock`.
+📁 `rps` - this folder contains `rock-paper-scissors` game/rule engine. It's super easy to extend with other shapes, like `lizard` and `spock`.__
 All you have todo is to create your new strategy, like below and include it to `index.js` in the same folder:
 
 ```
@@ -24,10 +24,10 @@ export default function(shape) {
 }
 ```
 
-📁 `src` - this folder contains UI specific components, like: `actions`, `reducers`, `store` and `components`.
-📁 `src/components` - since we do not use `react`, but want to leverage `redux` at its full power (whatever power we were able to implement :) ), we have a structure of components that we can devide into two parts: `presentational components` - to manipulate DOM and nothing else. `container components` - components that can dispatch actions.
+📁 `src` - this folder contains UI specific components, like: `actions`, `reducers`, `store` and `components`.__
+📁 `src/components` - since we do not use `react`, but want to leverage `redux` at its full power (whatever power we were able to implement :) ), we have a structure of components that we can devide into two parts: `presentational components` - to manipulate DOM and nothing else. `container components` - components that can dispatch actions.__
 
-📁 `tests` - this folder is for our tests.
+📁 `tests` - this folder is for our tests.__
 
 ## How To Run It
 0. Clone the repository to your local enviroment by running a comman in your terminal:
