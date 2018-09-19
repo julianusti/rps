@@ -6,10 +6,10 @@ RPS - implementation of `rock-paper-scissors` game in `vanilla JS` with `custom 
 
 ## Project Structure
 
-`lib` - this folder contains tiny redux implementation that allows us to follow unidirectional data flow, from `view component`>`action`>`reducer`>`view component`.
+📁 `lib` - this folder contains tiny redux implementation that allows us to follow unidirectional data flow, from `view component`>`action`>`reducer`>`view component`.
 **Keep in mind:** It doesn't covers all the edge cases.
 
-`rps` - this folder contains `rock-paper-scissors` game/rule engine. It's super easy to extend with other shapes, like `lizard` and `spock`.
+📁 `rps` - this folder contains `rock-paper-scissors` game/rule engine. It's super easy to extend with other shapes, like `lizard` and `spock`.
 All you have todo is to create your new strategy, like below and include it to `index.js` in the same folder:
 
 ```
@@ -24,8 +24,8 @@ export default function(shape) {
 }
 ```
 
-`src` - this folder contains UI specific components, like: `actions`, `reducers`, `store` and `components`.
-`tests` - this folder is for our tests.
+📁 `src` - this folder contains UI specific components, like: `actions`, `reducers`, 📁 `store` and `components`.
+📁 `tests` - this folder is for our tests.
 
 ## How To Run It
 
