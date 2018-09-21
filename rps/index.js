@@ -10,11 +10,19 @@ const SHAPES = Object.keys(strategies)
  */
 export const play = (playerOne, playerTwo) => {
   if (!playerOne.shape || !strategies[playerOne.shape]) {
-    throw new TypeError(`"playerOne" shape type is wrong.`)
+    const errorMsg = `"playerOne" shape type is wrong. Expected type: ${SHAPES.join(
+      ' | '
+    )}`
+
+    throw new TypeError(errorMsg)
   }
 
   if (!playerTwo.shape || !strategies[playerTwo.shape]) {
-    throw new TypeError(`"playerTwo" shape type is wrong.`)
+    const errorMsg = `"playerTwo" shape type is wrong. Expected type: ${SHAPES.join(
+      ' | '
+    )}`
+
+    throw new TypeError(errorMsg)
   }
 
   return {
@@ -33,7 +41,11 @@ export const play = (playerOne, playerTwo) => {
  */
 export const playVsComputer = playerOne => {
   if (!playerOne.shape || !strategies[playerOne.shape]) {
-    throw new TypeError(`"playerOne" shape type is wrong.`)
+    const errorMsg = `"playerOne" shape type is wrong. Expected type: ${SHAPES.join(
+      ' | '
+    )}`
+
+    throw new TypeError(errorMsg)
   }
 
   const computerShape = getRandomShape(SHAPES)
