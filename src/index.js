@@ -1,4 +1,5 @@
 import '@babel/polyfill'
+import './styles/main.scss'
 import configureStore from './store'
 import { ScoreObserver, PlayersMoveObserver, GameControls } from './components'
 
