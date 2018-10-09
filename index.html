@@ -12,17 +12,34 @@
   <noscript>
     You need to enable JavaScript to run this app.
   </noscript>
-  <div class="game-board" id="app">
-    <section>
-      <div class="game-player-one-shape">
-        <strong>Player One:</strong> <span></span>
+  <div id="app">
+    <section class="game-board-container">
+      <div class="player-one">
+        <div class="name">
+          Player
+        </div>
+        <div class="shape">
+          <span></span>
+        </div>
+        <div class="score">
+          <label>Score:</label>
+          <span>0</span>
+        </div>
       </div>
-      <strong>vs.</strong>
-      <div class="game-player-two-shape">
-        <strong>Player Two:</strong> <span></span>
+      <div class="versus">
+        <strong>vs.</strong>
       </div>
-      <div class="game-current-score">
-        <strong>Score:</strong> <span>0/0</span>
+      <div class="player-two">
+        <div class="name">
+          Computer
+        </div>
+        <div class="shape">
+          <span></span>
+        </div>
+        <div class="score">
+          <label>Score:</label>
+          <span>0</span>
+        </div>
       </div>
     </section>
     <section class="game-footer">

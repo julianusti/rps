@@ -1,7 +1,61 @@
-$azureish-whte: #dcf1f7;
+body {
+  font-family: sans-serif;
+}
 
-.game-board {
-  height: 100vh;
+$azure-white: #dcf1f7;
+$columbia-blue: #c7e4ed;
+
+.game-board-container {
+  height: 480px;
+  font-size: 12px;
   display: flex;
-  background: $azureish-whte;
+  position: relative;
+
+  .player {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .name {
+      font-size: 24px;
+      font-weight: 600;
+      padding-top: 1em;
+    }
+
+    .shape {
+      font-size: 24px;
+      text-transform: uppercase;
+      padding: 1em;
+    }
+
+    .score {
+      font-size: 24px;
+      font-weight: 600;
+      padding-bottom: 1em;
+    }
+  }
+
+  .player-one {
+    @extend .player;
+    background: $azure-white;
+  }
+
+  .player-two {
+    @extend .player;
+    background: $columbia-blue;
+  }
+
+  .versus {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+  }
 }
