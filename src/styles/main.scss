@@ -4,6 +4,10 @@ body {
 
 $azure-white: #dcf1f7;
 $columbia-blue: #c7e4ed;
+$pale-aqua: #bcd3e0;
+
+$dark-sky-blue: #95bdc6;
+$air-superiority-blue: #72a4af;
 
 .game-board-container {
   height: 480px;
@@ -25,7 +29,7 @@ $columbia-blue: #c7e4ed;
     }
 
     .shape {
-      font-size: 24px;
+      font-size: 50px;
       text-transform: uppercase;
       padding: 1em;
     }
@@ -57,5 +61,58 @@ $columbia-blue: #c7e4ed;
     right: 0;
     bottom: 0;
     font-size: 2em;
+  }
+}
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  width: 100%;
+
+  .shapes {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(
+      to right,
+      $azure-white,
+      $columbia-blue,
+      $pale-aqua
+    );
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(
+      to left,
+      $pale-aqua,
+      $dark-sky-blue,
+      $air-superiority-blue
+    );
+  }
+}
+
+button,
+.button {
+  border-width: 1px;
+  border-color: $pale-aqua;
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  font-size: 40px;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &:active {
+    background: #ffffff;
   }
 }

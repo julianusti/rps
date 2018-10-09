@@ -13,7 +13,15 @@ export default class Moves {
   }
 
   updateMoves(playerOneMove = '', playerTwoMove = '') {
-    this.$playerOneMoveLabel.innerText = playerOneMove
-    this.$playerTwoMoveLabel.innerText = playerTwoMove
+    const emoji = {
+      paper: `✋`,
+      rock: `👊`,
+      scissors: `✌`,
+      spock: `🖖`,
+      lizard: `🐸`
+    }
+
+    this.$playerOneMoveLabel.innerText = emoji[playerOneMove] || ''
+    this.$playerTwoMoveLabel.innerText = emoji[playerTwoMove] || ''
   }
 }
