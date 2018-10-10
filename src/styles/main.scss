@@ -1,91 +1,11 @@
-@import './colors.scss';
-@import './button.scss';
+// abstracts
+@import 'abstracts/variables';
 
-body {
-  font-family: sans-serif;
-}
+// components
+@import 'components/button';
 
-.game-board-container {
-  height: 480px;
-  font-size: 12px;
-  display: flex;
-  position: relative;
+// layouts
+@import 'layout/game';
 
-  .player {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
-    .name {
-      font-size: 24px;
-      font-weight: 600;
-      padding-top: 1em;
-    }
-
-    .shape {
-      font-size: 50px;
-      text-transform: uppercase;
-      padding: 1em;
-    }
-
-    .score {
-      font-size: 24px;
-      font-weight: 600;
-      padding-bottom: 1em;
-    }
-  }
-
-  .player-one {
-    @extend .player;
-    background: $azure-white-color;
-  }
-
-  .player-two {
-    @extend .player;
-    background: $columbia-blue-color;
-  }
-
-  .versus {
-    display: flex;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    font-size: 2em;
-  }
-}
-
-.game-controls {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background: transparent;
-  width: 100%;
-
-  .shapes {
-    display: flex;
-    justify-content: space-around;
-    background: linear-gradient(
-      to right,
-      $azure-white-color,
-      $columbia-blue-color,
-      $pale-aqua-color
-    );
-  }
-
-  .options {
-    display: flex;
-    justify-content: space-around;
-    background: linear-gradient(
-      to left,
-      $pale-aqua-color,
-      $dark-sky-blue-color,
-      $air-superiority-blue-color
-    );
-  }
-}
+// base
+@import 'base/base', 'base/typography';
