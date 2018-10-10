@@ -22,7 +22,6 @@ export default class Moves {
     }
 
     this.$playerOneMoveLabel.innerText = emoji[playerOneMove] || ''
-
     this.$playerTwoMoveLabel.innerText = emoji[playerTwoMove] || ''
   }
 }

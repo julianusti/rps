@@ -1,3 +1,23 @@
+button,
+.button {
+  border-width: 1px;
+  border-color: #bcd3e0;
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  font-size: 40px;
+  cursor: pointer; }
+  button:before,
+  .button:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  button:active,
+  .button:active {
+    background: #fff; }
+
 body {
   font-family: sans-serif; }
 
@@ -53,26 +73,6 @@ body {
     display: flex;
     justify-content: space-around;
     background: linear-gradient(to left, #bcd3e0, #95bdc6, #72a4af); }
-
-button,
-.button {
-  border-width: 1px;
-  border-color: #bcd3e0;
-  width: 100%;
-  height: 70px;
-  background: transparent;
-  font-size: 40px;
-  cursor: pointer; }
-  button:before,
-  .button:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0; }
-  button:active,
-  .button:active {
-    background: #ffffff; }
 
 
 /*# sourceMappingURL=style.css.map*/
