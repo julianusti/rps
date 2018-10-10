@@ -1,0 +1,78 @@
+body {
+  font-family: sans-serif; }
+
+.game-board-container {
+  height: 480px;
+  font-size: 12px;
+  display: flex;
+  position: relative; }
+  .game-board-container .player, .game-board-container .player-one, .game-board-container .player-two {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; }
+    .game-board-container .player .name, .game-board-container .player-one .name, .game-board-container .player-two .name {
+      font-size: 24px;
+      font-weight: 600;
+      padding-top: 1em; }
+    .game-board-container .player .shape, .game-board-container .player-one .shape, .game-board-container .player-two .shape {
+      font-size: 50px;
+      text-transform: uppercase;
+      padding: 1em; }
+    .game-board-container .player .score, .game-board-container .player-one .score, .game-board-container .player-two .score {
+      font-size: 24px;
+      font-weight: 600;
+      padding-bottom: 1em; }
+  .game-board-container .player-one {
+    background: #dcf1f7; }
+  .game-board-container .player-two {
+    background: #c7e4ed; }
+  .game-board-container .versus {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 2em; }
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  width: 100%; }
+  .game-controls .shapes {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to right, #dcf1f7, #c7e4ed, #bcd3e0); }
+  .game-controls .options {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(to left, #bcd3e0, #95bdc6, #72a4af); }
+
+button,
+.button {
+  border-width: 1px;
+  border-color: #bcd3e0;
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  font-size: 40px;
+  cursor: pointer; }
+  button:before,
+  .button:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; }
+  button:active,
+  .button:active {
+    background: #ffffff; }
+
+
+/*# sourceMappingURL=style.css.map*/

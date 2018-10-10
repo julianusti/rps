@@ -7,5 +7,3 @@ node_modules
 # test coverage
 coverage
 
-# build
-dist
