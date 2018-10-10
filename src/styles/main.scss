@@ -1,7 +1,118 @@
-$azureish-whte: #dcf1f7;
+body {
+  font-family: sans-serif;
+}
 
-.game-board {
-  height: 100vh;
+$azure-white: #dcf1f7;
+$columbia-blue: #c7e4ed;
+$pale-aqua: #bcd3e0;
+
+$dark-sky-blue: #95bdc6;
+$air-superiority-blue: #72a4af;
+
+.game-board-container {
+  height: 480px;
+  font-size: 12px;
   display: flex;
-  background: $azureish-whte;
+  position: relative;
+
+  .player {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .name {
+      font-size: 24px;
+      font-weight: 600;
+      padding-top: 1em;
+    }
+
+    .shape {
+      font-size: 50px;
+      text-transform: uppercase;
+      padding: 1em;
+    }
+
+    .score {
+      font-size: 24px;
+      font-weight: 600;
+      padding-bottom: 1em;
+    }
+  }
+
+  .player-one {
+    @extend .player;
+    background: $azure-white;
+  }
+
+  .player-two {
+    @extend .player;
+    background: $columbia-blue;
+  }
+
+  .versus {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 2em;
+  }
+}
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: transparent;
+  width: 100%;
+
+  .shapes {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(
+      to right,
+      $azure-white,
+      $columbia-blue,
+      $pale-aqua
+    );
+  }
+
+  .options {
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(
+      to left,
+      $pale-aqua,
+      $dark-sky-blue,
+      $air-superiority-blue
+    );
+  }
+}
+
+button,
+.button {
+  border-width: 1px;
+  border-color: $pale-aqua;
+  width: 100%;
+  height: 70px;
+  background: transparent;
+  font-size: 40px;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &:active {
+    background: #ffffff;
+  }
 }

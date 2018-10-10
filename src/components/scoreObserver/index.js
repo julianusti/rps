@@ -18,7 +18,7 @@ export default class ScoreObserver {
       return
     }
 
-    this.$score.updateLabel(`${score.playerOne}/${score.playerTwo}`)
+    this.$score.updateLabel(score)
   }
 
   init() {
