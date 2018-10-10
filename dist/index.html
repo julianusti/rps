@@ -13,62 +13,64 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <div id="app">
-    <section class="game-board-container">
-      <div class="player-one">
-        <div class="name">
-          Player
+    <div class="rps-game-container">
+      <section class="game-board-container">
+        <div class="player-one">
+          <div class="name">
+            <span>Player One</span>
+          </div>
+          <div class="shape">
+            <span></span>
+          </div>
+          <div class="score">
+            <label>Score:</label>
+            <span>0</span>
+          </div>
         </div>
-        <div class="shape">
-          <span></span>
+        <div class="versus">
+          <strong>vs</strong>
         </div>
-        <div class="score">
-          <label>Score:</label>
-          <span>0</span>
+        <div class="player-two">
+          <div class="name">
+            <span>Player Two</span>
+          </div>
+          <div class="shape">
+            <span></span>
+          </div>
+          <div class="score">
+            <label>Score:</label>
+            <span>0</span>
+          </div>
         </div>
-      </div>
-      <div class="versus">
-        <strong>vs.</strong>
-      </div>
-      <div class="player-two">
-        <div class="name">
-          Computer
+      </section>
+      <section class="game-controls-container">
+        <div class="shapes">
+          <button role="button" data-action="PAPER_SHAPE">
+            ✋
+          </button>
+          <button role="button" data-action="ROCK_SHAPE">
+            👊
+          </button>
+          <button role="button" data-action="SCISSORS_SHAPE">
+            ✌
+          </button>
+          <!-- <button role="button" data-action="SPOCK_SHAPE">
+                🖖
+              </button>
+              <button role="button" data-action="SPOCK_LIZARD">
+                🐸
+              </button> -->
         </div>
-        <div class="shape">
-          <span></span>
+        <div class="options">
+          <button role="button" data-action="COMPUTER_VS_COMPUTER">
+            🤖 vs.🤖
+          </button>
+          <button role="button" data-action="RESTART_GAME">
+            🔄
+          </button>
         </div>
-        <div class="score">
-          <label>Score:</label>
-          <span>0</span>
-        </div>
-      </div>
-    </section>
-    <section class="game-controls">
-      <div class="shapes">
-        <button role="button" data-action="PAPER_SHAPE">
-          ✋
-        </button>
-        <button role="button" data-action="ROCK_SHAPE">
-          👊
-        </button>
-        <button role="button" data-action="SCISSORS_SHAPE">
-          ✌
-        </button>
-        <!-- <button role="button" data-action="SPOCK_SHAPE">
-          🖖
-        </button>
-        <button role="button" data-action="SPOCK_LIZARD">
-          🐸
-        </button> -->
-      </div>
-      <div class="options">
-        <button role="button" data-action="COMPUTER_VS_COMPUTER">
-          🤖 vs.🤖
-        </button>
-        <button role="button" data-action="RESTART_GAME">
-          🔄
-        </button>
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 <script src="main.js"></script></body>
 

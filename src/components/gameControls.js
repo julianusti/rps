@@ -48,7 +48,7 @@ export default class GameControls {
    * Adds event listener to `window` object.
    */
   addEvents() {
-    Array.from($$('.game-controls button')).forEach(e => {
+    Array.from($$('.game-controls-container button')).forEach(e => {
       e.addEventListener('click', this.onClick.bind(this))
     })
 

@@ -1,11 +1,15 @@
+.rps-game-container {
+  height: 100vh;
+}
+
 /**
  * Game board layout
  */
 .game-board-container {
-  height: 100%;
   font-size: 12px;
   display: flex;
   position: relative;
+  height: 80%;
 
   .player {
     display: flex;
@@ -59,7 +63,7 @@
 /**
  * Game controls layout
  */
-.game-controls {
+.game-controls-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;

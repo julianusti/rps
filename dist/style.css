@@ -17,18 +17,24 @@ button,
     height: 100%;
     top: 0;
     left: 0; }
+  button:focus,
+  .button:focus {
+    outline: none; }
   button:active,
   .button:active {
-    background: #fff; }
+    background: #e7faff; }
+
+.rps-game-container {
+  height: 100vh; }
 
 /**
  * Game board layout
  */
 .game-board-container {
-  height: 100%;
   font-size: 12px;
   display: flex;
-  position: relative; }
+  position: relative;
+  height: 80%; }
   .game-board-container .player, .game-board-container .player-one, .game-board-container .player-two {
     display: flex;
     justify-content: space-between;
@@ -65,24 +71,25 @@ button,
 /**
  * Game controls layout
  */
-.game-controls {
+.game-controls-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background: transparent;
   width: 100%; }
-  .game-controls .shapes {
+  .game-controls-container .shapes {
     display: flex;
     justify-content: space-around;
     background: linear-gradient(to right, #dcf1f7, #c7e4ed, #bcd3e0); }
-  .game-controls .options {
+  .game-controls-container .options {
     display: flex;
     justify-content: space-around;
     background: linear-gradient(to left, #bcd3e0, #95bdc6, #72a4af); }
 
 body {
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  margin: 0; }
 
 body {
   font-family: "Source Code Pro", monospace; }

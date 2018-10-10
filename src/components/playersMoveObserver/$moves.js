@@ -5,10 +5,10 @@ import { $ } from '../../utils'
  */
 export default class Moves {
   constructor() {
-    this.$playerOnelabel = $('.player-one')
+    this.$playerOnelabel = $('.player-one .shape')
     this.$playerOneMoveLabel = this.$playerOnelabel.querySelector('span')
 
-    this.$playerTwolabel = $('.player-two')
+    this.$playerTwolabel = $('.player-two .shape')
     this.$playerTwoMoveLabel = this.$playerTwolabel.querySelector('span')
   }
 
